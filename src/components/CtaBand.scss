@@ -1,0 +1,35 @@
+.cta-band {
+  padding: 0 0 96px;
+
+  @include bp(880px) {
+    padding-bottom: 72px;
+  }
+}
+
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 44px;
+  border-top: 1px solid $line-strong;
+
+  p {
+    font-family: $display;
+    font-weight: 600;
+    font-size: clamp(20px, 2.6vw, 30px);
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+    max-width: 28ch;
+  }
+
+  .btn {
+    flex: none;
+  }
+
+  @include bp(640px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}

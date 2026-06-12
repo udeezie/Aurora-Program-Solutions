@@ -1,0 +1,50 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: $night;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  will-change: transform;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -20% -10% auto -10%;
+    height: 60%;
+    background: radial-gradient(ellipse 60% 100% at 50% 0%, rgba(205, 174, 95, 0.12), transparent 65%);
+    pointer-events: none;
+  }
+}
+
+.loader-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+}
+
+.loader-mark {
+  width: 88px;
+  height: 74px;
+}
+
+.loader-word {
+  font-family: $display;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-align: center;
+  color: $cream;
+
+  span {
+    display: block;
+    @include mono-label;
+    font-size: 10px;
+    color: $cream-faint;
+    margin-top: 10px;
+  }
+}

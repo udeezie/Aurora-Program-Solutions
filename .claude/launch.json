@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "aps-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "C:/Users/vorti/OneDrive/Desktop/APS",
+      "port": 5174,
+      "url": "http://localhost:5174/"
+    }
+  ]
+}

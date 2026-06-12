@@ -1,0 +1,24 @@
+.quote-band {
+  padding: 150px 0;
+  text-align: center;
+
+  blockquote {
+    font-size: clamp(30px, 4.4vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin: 0 auto;
+
+    em {
+      font-style: italic;
+      color: $aurora;
+      text-shadow: 0 0 50px rgba(132, 201, 142, 0.3);
+    }
+  }
+
+  .q-attr {
+    @include mono-label;
+    color: $cream-faint;
+    display: block;
+    margin-top: 36px;
+  }
+}

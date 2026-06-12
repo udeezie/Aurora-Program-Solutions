@@ -1,0 +1,76 @@
+.video-section {
+  padding-top: 40px;
+}
+
+.video-shell {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.video-caption {
+  @include mono-label;
+  color: $cream-faint;
+  margin-bottom: 14px;
+  padding: 0 4px;
+}
+
+.video-frame {
+  position: relative;
+  border: 1px solid $line-strong;
+  border-radius: 4px;
+  background: $horizon;
+  aspect-ratio: 16 / 9;
+  padding: 10px;
+  overflow: hidden;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.video-placeholder {
+  position: absolute;
+  inset: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  background:
+    radial-gradient(ellipse 70% 90% at 50% 115%, rgba(132, 201, 142, 0.1), transparent),
+    linear-gradient(165deg, #0e151c, #06090d);
+
+  span {
+    font-family: $serif;
+    font-style: italic;
+    font-size: 19px;
+    color: $cream-dim;
+  }
+}
+
+.play-btn {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  background: $cream;
+  border: none;
+  transition: transform 0.4s $ease, background 0.4s;
+
+  &:hover {
+    transform: scale(1.07);
+    background: $aurora;
+  }
+
+  svg {
+    width: 26px;
+    height: 26px;
+    fill: $night;
+    margin-left: 4px;
+  }
+}

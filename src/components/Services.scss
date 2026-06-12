@@ -1,0 +1,98 @@
+.service-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.service-panel {
+  position: sticky;
+  border: 1px solid $line-strong;
+  border-radius: 6px;
+  padding: 38px 46px 48px;
+  background: linear-gradient(170deg, $night-3, $night-2 70%);
+  box-shadow: 0 -22px 50px -30px rgba(0, 0, 0, 0.85);
+
+  &:nth-child(2) {
+    background: linear-gradient(170deg, #101a1c, #0d1418 70%);
+  }
+
+  &:nth-child(3) {
+    background: linear-gradient(170deg, #131a26, #0e1420 70%);
+  }
+
+  @include bp(700px) {
+    padding: 28px 24px 36px;
+  }
+}
+
+.panel-head {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 36px;
+
+  .panel-tag {
+    @include mono-label;
+    color: $aurora;
+    flex: none;
+    padding: 7px 14px;
+    border: 1px solid rgba(132, 201, 142, 0.3);
+    border-radius: 100px;
+    background: rgba(132, 201, 142, 0.06);
+  }
+
+  .panel-rule {
+    flex: 1;
+    height: 1px;
+    background: $line;
+  }
+}
+
+.panel-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+
+  @include bp(880px) {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  h3 {
+    font-family: $serif;
+    font-size: clamp(30px, 3.4vw, 44px);
+    line-height: 1.05;
+    max-width: 12ch;
+  }
+
+  .panel-desc {
+    font-family: $serif;
+    font-style: italic;
+    font-size: 19px;
+    color: $cream-dim;
+    margin-top: 20px;
+    max-width: 34ch;
+    line-height: 1.5;
+  }
+
+  ul {
+    list-style: none;
+    border-top: 1px solid $line;
+  }
+
+  li {
+    padding: 15px 4px;
+    border-bottom: 1px solid $line;
+    font-size: 15px;
+    color: $cream-dim;
+    transition: color 0.3s;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      color: $cream;
+    }
+  }
+}

@@ -1,0 +1,147 @@
+#about {
+  overflow: hidden;
+}
+
+.contours {
+  position: absolute;
+  right: -60px;
+  top: 0;
+  height: 100%;
+  width: auto;
+  pointer-events: none;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 90px;
+  align-items: start;
+
+  .section-head {
+    margin-bottom: 0;
+  }
+
+  @include bp(940px) {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+.exp-list {
+  list-style: none;
+  margin-top: 44px;
+  border-top: 1px solid $line-strong;
+
+  li {
+    padding: 19px 4px;
+    border-bottom: 1px solid $line;
+    font-size: 15.5px;
+    color: $cream-dim;
+    line-height: 1.65;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $cream;
+    }
+  }
+}
+
+.about-foot {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.foot-item {
+  display: flex;
+  gap: 24px;
+  align-items: baseline;
+
+
+  .f-label {
+    @include mono-label;
+    font-size: 10px;
+    color: $cream-faint;
+    width: 110px;
+    flex: none;
+  }
+
+  .f-value {
+    font-size: 14.5px;
+    color: $cream-dim;
+  }
+
+  .f-phone {
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $aurora;
+    }
+  }
+
+  .f-link {
+    @include mono-label;
+    @include underline-link;
+    font-size: 11px;
+    color: $aurora;
+
+    &::after {
+      background: $aurora;
+    }
+  }
+}
+
+.founder-card {
+  position: relative;
+  border: 1px solid $line-strong;
+  border-radius: 4px;
+  background: linear-gradient(170deg, $night-3, $horizon);
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.founder-art {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(132, 201, 142, 0.08), transparent 70%),
+    $horizon;
+  border: 1px solid $line;
+  border-radius: 2px;
+  overflow: hidden;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 4.6;
+    object-fit: cover;
+  }
+
+  &.has-photo {
+    background: $horizon;
+  }
+}
+
+.founder-meta {
+  padding: 24px 14px 14px;
+
+  h3 {
+    font-family: $serif;
+    font-size: 34px;
+    line-height: 1;
+  }
+
+  .f-cred {
+    @include mono-label;
+    font-size: 10px;
+    color: $cream-faint;
+    display: block;
+    margin-top: 9px;
+  }
+}

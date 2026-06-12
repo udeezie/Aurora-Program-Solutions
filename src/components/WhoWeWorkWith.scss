@@ -1,0 +1,24 @@
+.who-grid {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid $line-strong;
+}
+
+.who-card {
+  padding: 24px 0;
+  border-bottom: 1px solid $line;
+  transition: padding-left 0.35s $ease, color 0.3s;
+
+  span {
+    font-family: $display;
+    font-weight: 700;
+    font-size: clamp(24px, 3.4vw, 38px);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  &:hover {
+    padding-left: 16px;
+    color: $aurora;
+  }
+}

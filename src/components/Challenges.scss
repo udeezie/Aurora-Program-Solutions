@@ -1,0 +1,32 @@
+.challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 72px;
+
+  @include bp(640px) {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+}
+
+.challenge-card {
+  padding: 30px 0;
+  border-top: 1px solid $line;
+
+  h3 {
+    font-size: 20px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    transition: color 0.3s;
+  }
+
+  p {
+    font-size: 15px;
+    color: $cream-dim;
+    line-height: 1.65;
+  }
+
+  &:hover h3 {
+    color: $aurora;
+  }
+}
