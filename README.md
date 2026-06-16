@@ -48,3 +48,8 @@ src/
   styles/       Global styles and SCSS abstracts
   lib/          Shared helpers (animation variants)
 ```
+
+## License
+
+© 2026 Aflo Studios. All rights reserved. Published for portfolio and
+reference only — see [`LICENSE`](LICENSE). Not licensed for reuse.
